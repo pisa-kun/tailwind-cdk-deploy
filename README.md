@@ -1,14 +1,18 @@
-# Welcome to your CDK TypeScript project
+# AWS CDKでtailwindcssデプロイ　
 
-This is a blank project for CDK development with TypeScript.
+## 手順
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+1. mkdir tailwind-cdk-deploy && cd tailwind-cdk-deploy
+2. cdk init --language typescript
+3. npm install -D @aws-cdk/aws-s3 @aws-cdk/aws-s3-deployment
+4. mkdir tailwind && cd tailwind
+5. npm init -y
+6. npm install -D tailwindcss
+7. npx tailwindcss init
+8. ファイル修正
+9. npx tailwindcss -i ./src/input.css -o ./dist/output.css
+10. src/index.htmlの作成
 
-## Useful commands
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+
+[CDKでS3バケットポリシーを設定する](https://qiita.com/ohanamisan_Ba/items/24a4d8f4f7cd79ccaec2)
